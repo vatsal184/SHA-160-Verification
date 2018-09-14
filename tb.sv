@@ -242,8 +242,8 @@ class sha1_subscriber extends uvm_subscriber#(sha1_seq_item);
     sha1_seq_item trans;
   
     covergroup cov;
-      covi : coverpoint trans.text_i { option.auto_bin_max = 32;  } 
-      covo : coverpoint trans.text_o { option.auto_bin_max = 32;  }
+      covi : coverpoint trans.text_i;// { option.auto_bin_max = 32;  } 
+      covo : coverpoint trans.text_o;// { option.auto_bin_max = 32;  }
     endgroup
   
 
