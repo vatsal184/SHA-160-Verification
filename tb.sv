@@ -327,6 +327,8 @@ class sha1_test extends uvm_test;
       env.scoreb.cov.stop();
       $display("coverage : %d",env.scoreb.cov.covi.get_coverage());
       $display("coverage : %d",env.scoreb.cov.covo.get_coverage());
+      if (env.scoreb.cov.covi.get_coverage() > 50)
+            $finish;
       phase.drop_objection(this);
     
     //set a drain-time for the environment if desired
